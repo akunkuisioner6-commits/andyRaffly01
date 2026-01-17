@@ -1,84 +1,110 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
     <title>Local Gift | just for your gift.</title>
 
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/custom.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/responsive.css" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,400,800' type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
-        /* Perbaikan agar gambar kado tidak menimpa footer */
-        #primary { overflow: hidden; padding-bottom: 50px; }
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 40px 0;
-            border-top: 2px solid #ddd;
-            background: #f9f9f9;
-        }
-        .footer-column { flex: 1; min-width: 300px; padding: 10px; }
+        /* Perbaikan Layout agar Rapi di Laptop & HP */
+        #primary { overflow: hidden; padding-bottom: 40px; background: #fff; }
+        .portfolio-grid { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+        .portfolio-grid li { margin-bottom: 20px; }
+        .ch-item { width: 100%; height: 200px; border: 1px solid #eee; background-size: cover !important; background-position: center !important; }
+        
+        /* Footer Tetap Sejajar */
+        .footer-flex { display: flex !important; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding-top: 20px; }
+        .footer-left { flex: 1; min-width: 300px; text-align: left; }
+        .footer-right { flex: 1; min-width: 300px; text-align: right; }
+        
         @media (max-width: 768px) {
-            .footer-container { flex-direction: column; text-align: center; }
-            .footer-column { text-align: center !important; }
+            .footer-right { text-align: center; margin-top: 20px; }
+            .footer-left { text-align: center; }
+            .ch-item { height: 150px; }
         }
     </style>
 </head>
 
-<body>
-    <div id="wrapper" class="container">
+<body class="home page no_js responsive stretched">
+    <div id="wrapper" class="container group">
         
-        <header id="header" style="padding: 20px 0;">
+        <div id="header" class="group" style="padding: 20px 0;">
             <div class="row">
-                <div class="span4">
-                    <img src="images/logo home2.png" alt="Logo" style="max-height: 80px;">
+                <div id="logo" class="span4">
+                    <a href="index.html"><img src="images/logo home2.png" alt="logo"></a>
+                    <p id="tagline">just for your gift.</p>
                 </div>
-                <div class="span8" style="text-align: right;">
-                    <nav>
-                        <ul style="list-style: none; display: inline-flex; gap: 20px;">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
+                <div id="menu" class="span8">
+                    <ul id="nav" class="sf-menu" style="display: flex; gap: 20px; list-style: none; justify-content: flex-end;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages-about.html">About</a></li>
+                        <li><a href="pages-contact.html">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-        </header>
-
-        <div id="primary">
-            <h2 style="text-align: center; margin: 40px 0;">Produk Kami</h2>
-            <div class="row">
-                <div class="span3"><img src="images/portfolios/1.jpg" alt="Produk 1" style="width: 100%;"></div>
-                <div class="span3"><img src="images/portfolios/2.jpg" alt="Produk 2" style="width: 100%;"></div>
-                <div class="span3"><img src="images/portfolios/3.jpg" alt="Produk 3" style="width: 100%;"></div>
-                <div class="span3"><img src="images/portfolios/4.jpg" alt="Produk 4" style="width: 100%;"></div>
             </div>
         </div>
 
-        <footer class="footer-container">
-            <div class="footer-column">
-                <h3 style="font-weight: bold;">Get in touch</h3>
-                <p><i class="fa fa-map-marker"></i> Jl. Cemp. No.10, Bandar Lampung</p>
-                <p><i class="fa fa-phone"></i> +62 857 9878 6756</p>
-                <p><i class="fa fa-envelope"></i> localgift@gmail.com</p>
+        <div id="page-meta" class="container">
+            <div class="slogan" style="text-align: center; margin: 30px 0;">
+                <h2 style="font-family: 'Oswald'; font-size: 30px;">Category</h2>
+                <h3 style="color: #888;">Produk</h3>
             </div>
+        </div>
 
-            <div class="footer-column" style="text-align: right;">
-                <h3 style="font-weight: bold;">Market Place</h3>
-                <a href="https://shopee.co.id/localgiftt" target="_blank" style="text-decoration: none; color: #ee4d2d; font-weight: bold;">
-                    <img src="images/icons8-shopee-20.svg" alt="Shopee" style="vertical-align: middle;"> Shopee Store
-                </a>
+        <div id="primary">
+            <div class="container">
+                <ul class="portfolio-grid row">
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/1.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/2.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/3.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/4.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/5.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/6.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/7.jpg');"></div></li>
+                    <li class="span3"><div class="ch-item" style="background: url('images/portfolios/8.jpg');"></div></li>
+                </ul>
             </div>
-        </footer>
+        </div>
 
-        <div style="background: #333; color: #fff; padding: 15px; text-align: center;">
-            <p>© 2023 Local Gift - Powered by Andy Rafly</p>
+        <div id="footer" style="border-top: 1px solid #ccc; background: #fdfdfd; padding: 40px 0;">
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="footer-left">
+                        <h3 style="font-family: 'Oswald'; margin-bottom: 15px;">Get in touch</h3>
+                        <ul style="list-style: none; margin: 0; padding: 0; font-size: 13px; line-height: 1.8;">
+                            <li><i class="fa fa-map-marker"></i> Jl. Cemp. No.10, Segala Mider, Bandar Lampung</li>
+                            <li><i class="fa fa-phone"></i> +62 857 9878 6756</li>
+                            <li><i class="fa fa-whatsapp"></i> +62 857 9878 6756</li>
+                            <li><i class="fa fa-envelope"></i> localgift@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-right">
+                        <h3 style="font-family: 'Oswald'; margin-bottom: 15px;">Market Place</h3>
+                        <a href="https://shopee.co.id/localgiftt" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; background: #fff; padding: 8px 15px; border: 1px solid #ee4d2d; border-radius: 4px;">
+                            <img src="images/icons8-shopee-20.svg" style="width: 20px; margin-right: 8px;">
+                            <span style="color: #ee4d2d; font-weight: bold;">Shopee</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="copyright" style="background: #333; color: #999; padding: 15px 0; text-align: center; font-size: 12px;">
+            <div class="container">
+                <div class="row">
+                    <div class="span6" style="text-align: left;">© 2023 Local Gift - All Rights Reserved</div>
+                    <div class="span6" style="text-align: right;">Powered by <strong style="color: #fff;">Andy Rafly</strong></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
